@@ -25,7 +25,7 @@ pipeline {
                   sourceFiles: "*",
                   removePrefix: "",
                   remoteDirectory: "",
-                  execCommand: "sudo systemctl restart apache2"
+                  execCommand: "sudo systemctl restart httpd"
                 )
               ])
           ])
