@@ -1,5 +1,5 @@
 pipeline {
-  agent node1
+  agent { label 'node1' }
   stages {
     stage('build') {
       steps {
@@ -13,7 +13,7 @@ pipeline {
     }
 
     stage('SSH transfer') {
-      script {
+      steps {
         sshPublisher(
           continueOnError: false, failOnError: true,
           publishers: [
