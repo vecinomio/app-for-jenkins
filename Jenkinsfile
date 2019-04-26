@@ -22,7 +22,7 @@ pipeline {
               verbose: true,
               transfers: [
                 sshTransfer(
-                  sourceFiles: "*",
+                  sourceFiles: "*.html",
                   removePrefix: "",
                   remoteDirectory: "",
                   execCommand: "sudo systemctl restart httpd"
